@@ -1,0 +1,328 @@
+
+p {
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;;
+}
+h1, h2, h3, h4, h5, h6{
+
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;;
+}
+.logo img {
+	width  : 170px;
+	height : auto;
+}
+
+.line {
+	background-color : #4285f4;
+	width            : 100%;
+	height           : 3px;
+	/*margin           : 2px 0px ;*/
+}
+/*register */
+.fiat-mobile h5{
+
+	text-align: right;
+}
+
+@media only screen and (max-width : 700px) {
+	.fiat-mobile h5 {
+		text-align : left;
+	}
+}
+/*end*/
+
+
+.total-div {
+	margin-top : 75px;
+
+}
+.total-div img{
+	width: 50px;
+}
+
+
+
+/*end*/
+
+/* Container */
+.fiat-log {
+	position  : relative;
+	max-width : 700px;
+	width     : 100%;
+	margin    : 0 auto 100px;
+
+}
+
+.mob-background {
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 250px;
+	border-top    : 5px solid #4384f8;
+}
+
+.mob-background h3 {
+
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+.box {
+
+	margin-top : 50px;
+	height     : 100px;
+}
+
+.number h5 {
+	text-align  : right;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width : 480px) {
+	.number h5 {
+		text-align : left;
+	}
+}
+
+
+.mob-search {
+	margin-bottom : 10px;
+
+}
+
+.mob-search .input-group-addon {
+
+	background-color : #006db2;
+
+}
+
+.mob-search i {
+
+	color     : #fff;
+	font-size : 20px;
+}
+
+.reg-btn .btn-primary {
+
+	background-color : #016aae;
+	width            : 110px;
+}
+
+/*otp*/
+.mob-background2 {
+
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 350px;
+	border-top    : 5px solid #4384f8;
+
+}
+
+.mob-background2 h3 {
+
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+/*end*/
+
+/*payment*/
+.pay-background {
+
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 375px;
+	border-top    : 5px solid #4384f8;
+
+}
+
+.pay-background h3 {
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+.make {
+	margin-top : 22px;
+
+}
+
+.make .btn-default {
+
+	background-color : #0065a6;
+	color            : #fff;
+}
+
+.payment-box {
+	margin-top : 50px;
+}
+
+@media only screen and (max-width : 480px) {
+	.mob-search input {
+		width : 100%;
+
+	}
+
+}
+
+.pay {
+	margin-bottom : 10px;
+
+}
+
+/*end*/
+/*participant multiple */
+.mobile-1 {
+	height : 75px;
+
+}
+
+.mobile-2 {
+	height : 75px;
+
+}
+
+.mobile-3 {
+	height : 80px;
+
+}
+
+.mobile-4 {
+	height : 75px;
+
+}
+
+.mobile-5 {
+	height : 75px;
+
+}
+
+.mobile-6 {
+	height : 75px;
+
+}
+
+.mobile-7 {
+	height : 90px;
+
+}
+
+.mobile-8 {
+	height        : 100px;
+	margin-bottom : 30px;
+
+}
+
+.show {
+	width            : 100%;
+	height           : auto;
+	background-color : #f1f1f1;
+	border-radius    : 5px;
+	box-shadow       : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	border-top       : 5px solid #4384f8;
+	box-sizing       : border-box;
+	margin-bottom    : 22px;
+}
+
+.payment h3 {
+	text-align : center;
+
+}
+
+.set1 p {
+	text-align : center;
+	font-size  : 30px;
+	color      : #54e;
+}
+
+/*name */
+.fiat-mr{
+	margin-left: -15px;
+}
+@media only screen and (max-width : 800px){
+	.mobile-3{
+		height:125px
+	}
+
+}
+@media only screen and ( max-width: 800px){
+
+	.fiat-name{
+
+		margin-left:-15px;
+	}
+}
+/*name end*/
+
+/*gender */
+.fiat-religion{
+	margin-left: -15px;
+
+}
+@media only screen and ( max-width: 800px){
+
+	.mobile-5{
+		height: 125px;
+	}
+}
+@media only screen and ( max-width: 800px){
+
+	.fiat-cast{
+		margin-left: -15px;
+	}
+}
+/*end*/
+
+
+
+
+
+.part-save .btn-primary {
+	width         : 100%;
+	margin-bottom : 10px;
+
+}
+
+@media only screen and (max-width : 480px) {
+	.mobile-6 {
+		margin-top    : 50px;
+		margin-bottom : 50px;
+	}
+}
+
+.set {
+
+	visibility : hidden;
+}
+
+.fiat-save {
+	visibility : hidden;
+
+}
+
+.part-save .btn-primary {
+
+	width : 150px;
+
+}
+
+@media only screen and (max-width : 1000px) {
+
+	.part-save .btn-primary {
+
+		width      : 100%;
+		margin-top : 10px;
+
+	}
+}
+
+/*end*/

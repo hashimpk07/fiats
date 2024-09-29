@@ -1,0 +1,28 @@
+<?php echo $__env->make('layouts.fiats.web_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div id="about" class="light-wrapper" style="background-color:#fff;">
+    <div class="container inner">
+        <div class="row story">
+            <div  class="text-center">
+                <h1>Fiat Scriptura</h1>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-wrapper" style="text-align:justify;font-family:Times New Roman !important;font-style: normal; font-size: 18px;font-weight: lighter;color:#000000; !important;">
+                    <ol>
+                        <li>Registration fee for the writing competition will be RS 100 for each participants.</li>
+                        <li>No refund for writing competition on any account.</li>
+                        <li>For purchase of books defective products will be replaced free of cost.</li>
+                        <li>Registration fee paid for exhibition will be refunded on genuine grounds.</li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.services -->
+    </div>
+    <!-- /.container -->
+</div><!-- #about -->
+<br/>
+<br/>
+
+<?php echo $__env->make('layouts.fiats.web_footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

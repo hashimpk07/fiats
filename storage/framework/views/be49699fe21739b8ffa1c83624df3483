@@ -1,0 +1,10 @@
+Dear <?php echo e($member->name); ?>,Thank you for registering for the Fiat Scripture. 
+Your registration number for Fiat Scripture is <?php echo e($member->reg_no); ?>. 
+You can view your participant slip, by click the following URL. If you have any questions please contact <br/>
+<br/>
+Thank you<br/>
+Prince Varghese<br/>
+9847373788<br/>
+<br/>
+<br/>
+<?php echo e($url); ?>

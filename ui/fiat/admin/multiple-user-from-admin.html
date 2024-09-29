@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>User</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--log in-->
+    <link rel='stylesheet prefetch'
+          href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <!--end-->
+
+    <!--date picker-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+    <!--end-->
+
+
+</head>
+<body>
+<div class="row" style="margin-left: 0; margin-right: 0;">
+    <div class="head">
+        <div class="col-md-12">
+            <br>
+
+            <div class="logo">
+                <img src="images/fiatlogo.png">
+
+            </div>
+            <div class="dropdown-multiple">
+                <button class="dropbtn">WELCOME ADMIN</button>
+                <div class="dropdown-content">
+                    <a href="#">Change Password</a>
+                    <a href="#">Log Out</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="line">
+
+<section class="participant">
+    <div class="container">
+        <div class="show">
+
+            <div class="col-md-12 payment">
+                <h3>Participant Details</h3>
+            </div>
+
+
+            <div class="container-fluid total-div">
+
+
+                <div class="col-md-2 set1">
+                    <a href="#"><p><img src="images/arow-up.png"></p></a>
+
+                    <p>
+                        <button type="button" class="btn btn-default">suhail</button>
+                    </p>
+
+
+                    <p>
+                        <button type="button" class="btn btn-default">suhail</button>
+                    </p>
+
+                    <a href="#"><p> <img src="images/arow-down.png"></p></a>
+
+                </div>
+                <div class="col-md-10">
+                    <div class="col-md-4">
+                        <div class="mobile-1">
+                            <p>Mobile Number</p>
+
+                            <div class="input-group mob-search">
+                                <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-mobile"
+                                                                                      style="font-size: 20px;"></i> </span>
+                                <input type="text" class="form-control" placeholder="Mobile Number"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="mobile-2">
+                            <p>Email ID</p>
+
+                            <div class="input-group mob-search">
+                                <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-envelope"
+                                                                                      style="font-size: 15px"></i> </span>
+                                <input type="text" class="form-control" placeholder="email ID"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="mobile-3">
+                            <p>Name</p>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group fiat-mr">
+
+                                    <select class="form-control">
+                                        <option>Mr</option>
+                                        <option>Mrs</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 fiat-name">
+                                <div class="form-group">
+
+                                    <form>
+                                        <input type="" class="form-control"  placeholder="name">
+                                    </form>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="mobile-4">
+                            <p>Gender</p>
+
+                            <div class="col-md-6 search col-xs-6">
+                                <form action="demo_form.asp" method="get">
+                                    <input type="checkbox" name="vehicle" value="Bike"> Male
+
+
+                                </form>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+
+
+                                <input type="checkbox" name="vehicle" value="Car" checked> Female
+
+
+                            </div>
+                        </div>
+                        <div class="mobile-5">
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group fiat-religion">
+                                    <p>Religion</p>
+
+                                    <form>
+                                        <input type="" class="form-control"  placeholder="Religion">
+                                    </form>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group fiat-cast">
+                                    <p>Cast</p>
+
+                                    <form>
+                                        <input type="" class="form-control"  placeholder="Cast">
+                                    </form>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mobile-6">
+                            <p>Date of birth</p>
+
+
+                            <div class="input-group mob-search">
+
+                                <input type="text" class="form-control" id="datepicker" placeholder="dd/mm/yyyy"
+                                       aria-describedby="basic-addon1">
+                                <span class="input-group-addon" id=" datepicker"> <i class="fa fa fa-calendar"
+                                                                                     style="font-size: 15px"></i> </span>
+                            </div>
+
+
+                        </div>
+                        <div class="mobile-8">
+                            <p>Marital status</p>
+
+                            <div class="form-group">
+
+                                <select class="form-control">
+                                    <option>Married</option>
+                                    <option>UNMarried</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mobile-1">
+                            <p>Occupation</p>
+
+                            <form>
+                                <input type="" class="form-control" id="" placeholder="Occupation">
+                            </form>
+
+                        </div>
+                        <div class="mobile-2">
+                            <p>Parish</p>
+
+                            <form>
+                                <input type="" class="form-control" id="" placeholder="Parish">
+                            </form>
+
+                        </div>
+                        <div class="mobile-3">
+                            <p>Diocese</p>
+
+                            <form>
+                                <input type="" class="form-control" id="" placeholder="Diocese">
+                            </form>
+
+                        </div>
+                        <div class="mobile-4">
+                            <p>Testament</p>
+
+                            <div class="col-md-6 search col-xs-6">
+                                <form action="demo_form.asp" method="get">
+                                    <input type="checkbox" name="vehicle" value="Bike"> New (NT)
+
+
+                                </form>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+
+
+                                <input type="checkbox" name="vehicle" value="Car" checked> Full (FT)
+
+
+                            </div>
+
+                        </div>
+                        <div class="mobile-5">
+                            <p>Language</p>
+
+                            <div class="form-group">
+
+                                <select class="form-control">
+                                    <option selected>Language</option>
+                                    <option>Malayalam</option>
+                                    <option>English</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="mobile-8">
+                            <p>Address</p>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="4" placeholder="Enter ..."></textarea>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mobile-1 ">
+                            <div class="part-save col-md-12 col-sm-12">
+                                <button type="button" class="btn btn-primary center-block">New Registration</button><br>
+                                <button type="button" class="btn btn-primary center-block">Particcipant</button>
+                            </div>
+                        </div>
+                        <div class="mobile-2 hidden-xs hidden-sm"></div>
+                        <div class="mobile-3 hidden-xs hidden-sm"></div>
+                        <div class="mobile-4 hidden-xs hidden-sm"></div>
+                        <div class="mobile-5 hidden-xs hidden-sm"></div>
+                        <div class="mobile-6 ">
+                            <div class="part-save col-md-12 col-sm-12 ">
+                                <button type="button" class="btn btn-primary center-block">Save</button>
+                                <button type="button" class="btn btn-primary center-block">Save / Add New</button>
+                                <button type="button" class="btn btn-primary center-block">Save / Pay Now</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
+
+
