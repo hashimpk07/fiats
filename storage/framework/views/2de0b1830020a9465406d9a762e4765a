@@ -1,0 +1,38 @@
+<?php if( count($records) < 1 ): ?>
+	<tr class="cgm-norecords">
+		<td colspan="100%"><?php echo DEFAULT_NO_RECORD_MESSAGE; ?></td>
+	</tr>
+	<?php return; ?>
+<?php endif; ?>
+<?php foreach($records as $record ): ?>
+	<tr class="view-clickable">
+         <?php if($record->flag==1){
+             $language=$record->language ;
+		}
+		else{
+            $language='Other'."(".$record->language.")" ;
+			 }?>
+		<td><?php echo e($records->recordno->getNext()); ?></td>
+		<td style="white-space: nowrap" class="view" onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e($record->reg_no); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e($record->mobile); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e($record->name); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\Qudratom\Utilities\Helper::tellGender( $record->gender )); ?></td>
+		<td style="white-space: nowrap" class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\Qudratom\Utilities\DateTime::clientDate( $record->dob )); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\App\Models\Virtual\MaritalStatus::explain( $record->marital_status )); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\App\Models\Virtual\AgeGroups::explainGroup( $record->agegroup )); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e($language); ?></td>
+		<td style="width: 1px;" class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\App\Models\Virtual\Testaments::explain($record->testament)); ?></td>
+		<td class="view"  onclick="actionForm('<?php echo e(action('PersonController@adminview', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" ><?php echo e(\App\Models\Virtual\StatusTypes::explain( $record->status )); ?></td>
+		<td  class="action-column">
+			<a class="green" href="javascript:;"
+			   	onclick="actionForm('<?php echo e(action('PersonController@adminedit', [$record->id, true] )); ?>', {}, 'idMemberAddWrap' )" title="Edit">
+				<i class="fa fa-pencil bigger-130"   title="Edit"></i>
+			</a>
+
+			<a class="green" href="javascript:;"
+			   	onclick="actionForm('<?php echo e(action( 'MemberController@acknowledge', [$record->id] )); ?>', {}, 'idMemberAddWrap' )" title="acknowledge">
+				<i class="fa fa-envelope" aria-hidden="true"  ></i>
+			</a>
+		</td>
+	</tr>
+<?php endforeach; ?>

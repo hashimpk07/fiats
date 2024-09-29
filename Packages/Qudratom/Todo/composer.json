@@ -1,0 +1,20 @@
+{
+    "name": "qudratom/todo",
+    "description": "A small todo file",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nithin Ta",
+            "email": "nithin@alpha.qudratom.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support" : "~5"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Qudratom\\Todo\\" : "src/"
+        }
+    }
+}

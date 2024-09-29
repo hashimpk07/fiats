@@ -1,0 +1,6 @@
+[23-Feb-2017 07:58:47 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to App\Exceptions\Handler::report() must be an instance of Exception, instance of Error given, called in /mnt/devenv/PROJECTS/PHP/wamp/www/fiats/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php on line 73 and defined in /mnt/devenv/PROJECTS/PHP/wamp/www/fiats/app/Exceptions/Handler.php:25
+Stack trace:
+#0 /mnt/devenv/PROJECTS/PHP/wamp/www/fiats/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(73): App\Exceptions\Handler->report(Object(Error))
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Error))
+#2 {main}
+  thrown in /mnt/devenv/PROJECTS/PHP/wamp/www/fiats/app/Exceptions/Handler.php on line 25

@@ -1,0 +1,39 @@
+<?php $__env->startSection('content'); ?>
+
+	<div id="idMemberAddWrap">
+	</div>
+	<div style="clear:both;"></div>
+<div class="form-admin row"   >
+
+	<div class="col-sm-1"></div>
+	<div class="col-md-5 col-xs-5 fiat-report" >
+		<a href="<?php echo e(url('person')); ?>"><button type="button" class="btn btn-primary " >New Registration</button></a><br>
+	</div>
+
+
+	<?php echo $__env->make('shared.table-options', [ 'SEARCH_CONTROLLER_PREFIX' => "Member" ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	<div style="clear: both"></div>
+
+	<div class="col-md-1"></div>
+	<div class="table-box col-sm-10">
+		<div class="box-header">
+			<?php echo $__env->make('shared.search', [ 'SEARCH_CONTROLLER_PREFIX' => "Member" ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+
+		<a class="green" href="javascript:;"
+		   onclick="actionForm('<?php echo e(action('MemberController@filter')); ?>', {}, 'idMemberAddWrap' )" >
+		</a>
+
+		<!-- div.dataTables_borderWrap -->
+		<div id="idMemberTabularWrap" class="box-body table-responsive no-padding">
+			<?php echo $tablehtml; ?>
+
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.fiats.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

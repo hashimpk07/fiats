@@ -1,0 +1,9 @@
+<?php $__env->startSection('content'); ?>
+
+	<div class="row" style="margin-left: 0; margin-right: 0;">
+		<div class="container fiat-log " d="idOtpAddWrap" >
+		<?php echo $__env->make('otp.add', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.fiats.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,27 @@
+<?php $__env->startSection('content'); ?>
+
+	<div class="container">
+		<div class="show">
+
+			<div class="col-md-12 col-sm-12 payment">
+				<h3>Participant Details</h3>
+			</div>
+
+			<div class="container-fluid total-div">
+
+				<?php echo $__env->make('person.session', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+					<?php echo $__env->make('person.add', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('layouts.fiats.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

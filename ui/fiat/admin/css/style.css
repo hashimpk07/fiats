@@ -1,0 +1,594 @@
+h1,h2,h3, h4,h5,h6 {
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;  ;
+}
+ p{
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;  ;
+}
+.logo{
+	width  : 170px;
+	margin: 0px;
+	position: absolute;
+
+}
+.logo img {
+	width  : 170px;
+	height : auto;
+}
+
+.line {
+	background-color : #4285f4;
+	width            : 100%;
+	height           : 3px;
+	/*margin           : 2px 0px ;*/
+}
+.total-div{
+	margin-top: 75px;
+
+}
+.head1{
+
+	margin-bottom: 22px;
+}
+
+
+
+/* Container */
+.fiat-log {
+	position  : relative;
+	max-width : 700px;
+	width     : 100%;
+	margin    : 0 auto 100px;
+
+}
+
+.mob-background {
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 250px;
+	border-top    : 5px solid #4384f8;
+}
+
+.mob-background h3 {
+
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+.box {
+
+	margin-top : 50px;
+	height     : 100px;
+}
+
+
+
+.mob-search {
+	margin-bottom : 10px;
+
+}
+
+.mob-search .input-group-addon {
+
+	background-color : #006db2;
+
+}
+
+.mob-search i {
+
+	color     : #fff;
+	font-size : 20px;
+}
+
+.reg-btn .btn-primary {
+
+	background-color : #016aae;
+	width            : 110px;
+}
+
+/*otp*/
+.mob-background2 {
+
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 350px;
+	border-top    : 5px solid ;
+
+}
+
+.mob-background2 h3 {
+
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+/*end*/
+
+/*payment*/
+.pay-background {
+
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : 375px;
+	border-top    : 5px solid #4384f8;
+
+}
+
+.pay-background h3 {
+	text-align  : center;
+	font-family : Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+
+.payment-box {
+	margin-top : 50px;
+}
+
+@media only screen and (max-width : 500px) {
+	.mob-search input {
+		width : 100%;
+
+	}
+
+}
+
+.pay {
+	margin-bottom : 10px;
+
+}
+
+/*end*/
+/*participant multiple */
+.mobile-1 {
+	height : 75px;
+
+}
+
+.mobile-2 {
+	height : 75px;
+
+}
+
+.mobile-3 {
+	height : 80px;
+
+}
+
+.mobile-4 {
+	height : 75px;
+
+}
+
+.mobile-5 {
+	height : 75px;
+
+}
+
+.mobile-6 {
+	height : 75px;
+
+}
+
+.mobile-7 {
+	height : 90px;
+
+}
+
+.mobile-8 {
+	height        : 100px;
+	margin-bottom : 30px;
+
+}
+
+.show {
+	width            : 100%;
+	height           : auto;
+	background-color : #f1f1f1;
+	border-radius    : 5px;
+	box-shadow       : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	border-top       : 5px solid #4384f8;
+	box-sizing       : border-box;
+	margin-bottom    : 22px;
+}
+
+.payment h3 {
+	text-align : center;
+
+}
+
+
+.set1 p {
+	text-align : center;
+	font-size  : 30px;
+	color      : #54e;
+}
+
+.search {
+	margin-left : -16px;
+}
+
+@media only screen and (max-width : 500px) {
+	.serach {
+
+		width : 177px
+	}
+}
+
+.serach2 {
+
+	width : 130px;
+}
+
+@media only screen and (max-width : 500px) {
+	.serach2 {
+
+		width : 110px
+	}
+}
+
+.part-religion {
+	width : 115px;
+}
+@media only screen and (max-width : 500px) {
+	.part-religion {
+
+		width : 105px;
+	}
+}
+.part-cast {
+
+	width : 125px;
+}
+
+@media only screen and (max-width : 500px) {
+	.part-cast {
+
+		width : 110px;
+	}
+}
+
+.part-save .btn-primary {
+	width :100%;
+	margin-bottom : 10px;
+
+}
+
+@media only screen and (max-width : 500px) {
+	.mobile-6 {
+		margin-top    : 50px;
+		margin-bottom : 50px;
+	}
+}
+.set{
+
+	visibility: hidden;
+}
+.fiat-save{
+	visibility: hidden;
+
+}
+
+/*end*/
+
+/*multiple user*/
+
+
+
+
+
+
+.dropbtn {
+	background-color: transparent;
+	color: blue;
+	padding: 16px;
+	font-size: 16px;
+	border: 1px solid blue;
+	cursor: pointer;
+}
+
+.dropdown-multiple {
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin-bottom: 20px;
+}
+@media only screen and (max-width : 480px){
+
+	.dropdown-multiple {
+		position: relative;
+		display: inline-block;
+		float: right;
+		margin-bottom: 20px;
+		width: 100px;
+		margin-right: 20px;
+	}
+}
+
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown-multiple:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-multiple:hover .dropbtn {
+	background-color: transparent;
+}
+/*end*/
+
+
+
+
+/*new code*/
+
+
+.table-box {
+	position      : relative;
+	border-radius : 3px;
+	background    : #f9f9f9;
+	border-top    : 5px solid #4384f8;
+	margin-bottom : 20px;
+	width         : 100%;
+	box-shadow    : 3px 4px 3px rgba(0, 0, 0, 0.1)
+}
+.box-header:before, .box-body:before, .box-footer:before, .box-header:after, .box-body:after, .box-footer:after {
+	content : " ";
+	display : table
+}
+
+.box-header:after, .box-body:after, .box-footer:after {
+	clear : both
+}
+
+.box-header {
+	color    : #444;
+	display  : block;
+	padding  : 10px;
+	position : relative
+}
+
+.box-header.with-border {
+	border-bottom : 1px solid #f4f4f4
+}
+
+.collapsed-box .box-header.with-border {
+	border-bottom : none
+}
+
+.box-header > .fa, .box-header > .glyphicon, .box-header > .ion, .box-header .box-title {
+	display     : inline-block;
+	font-size   : 18px;
+	margin      : 0;
+	line-height : 1
+}
+
+.box-header > .fa, .box-header > .glyphicon, .box-header > .ion {
+	margin-right : 5px
+}
+
+.box-header > .box-tools {
+	position : absolute;
+	right    : 10px;
+	top      : 5px
+}
+
+.box-header > .box-tools [data-toggle="tooltip"] {
+	position : relative
+}
+
+.box-header > .box-tools.pull-right .dropdown-menu {
+	right : 0;
+	left  : auto
+}
+.box-body {
+	border-top-left-radius     : 0;
+	border-top-right-radius    : 0;
+	border-bottom-right-radius : 3px;
+	border-bottom-left-radius  : 3px;
+	padding                    : 10px
+}
+
+.box-body > .table {
+	margin-bottom : 0
+}
+
+
+/*end*/
+
+.fiat-report .btn-primary{
+	width :150px;
+	margin-bottom: 10px;
+}
+
+.fiat-print .btn-primary{
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width : 500px) {
+	.fiat-print .btn-primary {
+
+		width : 100px;
+		margin-bottom: 15px;
+	}
+}
+
+
+/*page naion*/
+
+.mobile-9{
+	height: 75px;
+}
+@media only screen and (max-width : 500px) {
+	.mobile-9{
+		height: 0;
+		margin-top: 50px;
+	}
+}
+
+@media only screen and (max-width : 500px) {
+	.mobile-10{
+		height: 50px;
+		margin-top: 30px;
+
+	}
+}
+
+/*tabile view*/
+
+/*bible recition page*/
+
+
+.bible-background {
+
+	position      : relative;
+	background    : #f1f1f1;
+	border-radius : 5px;
+	padding       : 8px 0 20px 0;
+	box-sizing    : border-box;
+	box-shadow    : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	height        : auto;
+	border-top    : 5px solid #4384f8;
+
+}
+.bible-background h3{
+	text-align: center;
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+}
+.date-datepicker{
+	height: 50px;
+	margin-top: 30px;
+}
+.date-datepicker h5{
+	text-align: center;
+
+}
+@media only screen and (max-width : 480px){
+
+	.date-datepicker h5{
+		text-align: left;
+
+	}
+}
+@media only screen and (max-width : 480px) {
+	.date-datepicker{
+		height: 75px;
+
+
+	}
+
+}
+.date-serach{
+	width: 200px;
+
+
+}
+.date-serach .input-group-addon {
+
+	background-color : #006db2;
+
+}
+.date-serach i {
+
+	color     : #fff;
+	font-size : 20px;
+}
+
+.date-remarks{
+	height: 90px;
+	margin-top: 30px;
+
+}
+.date-remarks h5{
+
+	text-align: center;
+}
+@media only screen and (max-width : 480px){
+	.date-remarks h5{
+
+		text-align: left;
+	}
+
+}
+.date-text{
+
+	width: 200px;
+}
+.bible-button{
+
+	margin-top: 20px;
+}
+
+
+/*end*/
+/*name */
+.fiat-mr{
+	margin-left: -15px;
+}
+@media only screen and (max-width : 800px){
+	.mobile-3{
+		height:125px
+	}
+
+}
+@media only screen and ( max-width: 800px){
+
+	.fiat-name{
+
+		margin-left:-15px;
+	}
+}
+/*name end*/
+
+/*gender */
+.fiat-religion{
+	margin-left: -15px;
+
+}
+@media only screen and ( max-width: 800px){
+
+	.mobile-5{
+		height: 125px;
+	}
+}
+@media only screen and ( max-width: 800px){
+
+	.fiat-cast{
+		margin-left: -15px;
+	}
+}
+/*end*/
+
+
+/*bibl*/
+
+

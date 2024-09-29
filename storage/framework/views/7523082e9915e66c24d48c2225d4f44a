@@ -1,0 +1,35 @@
+<footer id="footer" class="dark-wrapper">
+    <div class="container inner">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <a  href="<?php echo e(url('terms_and_conditions')); ?>" data-toggle="tooltip"> Terms&Conditions</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="<?php echo e(url('privacy_policy')); ?>" data-toggle="tooltip"> Privacy Policy </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="<?php echo e(url('price_details_refunds')); ?>" data-toggle="tooltip"> Price Details & Refund</a>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<script src="public/assets/fiats/js/jquery-2.1.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="public/assets/fiats/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+<script src="<?php echo e(asset('public/assets/fiats/js/jquery.actual.min.js')); ?>"></script>
+<script src="<?php echo e(asset('public/assets/fiats/js/vendor/bootstrap.min.js')); ?>"></script>
+<?php if( ! @$NO_SLIDER ) { ?>
+
+<script src="<?php echo e(asset('public/assets/fiats/js/main.js')); ?>"></script>
+<?php } ?>
+
+
+</body>
+</html>
+
