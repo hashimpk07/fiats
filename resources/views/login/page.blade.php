@@ -1,0 +1,55 @@
+@extends("layouts.fiats.login")
+
+@section("content")
+
+    <div class="row" style="margin-left: 0; margin-right: 0;">
+    <div class="container fiat-log ">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="card "></div>
+            <div class="card">
+                <h1 class="title">Login</h1>
+
+                <?php echo Form::open(array('action' => 'LoginController@onSubmit', 'id' => 'idLoginForm' ) ); ?>
+                    <div class="input-container">
+                        <input type="#{type}" id="#{label}" required="required" name="username" />
+                        <label for="#{label}">User name</label>
+
+                        <div class="bar"></div>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="#{label}" required="required" name="password"  />
+                        <label for="#{label}">Password</label>
+
+                        <div class="bar"></div>
+                    </div>
+                    <div class="button-container">
+                        <button><span>Go</span></button>
+                    </div>
+                <?php echo Form::close(); ?>
+            </div>
+
+            <div class="card alt">
+                <div class="toggle"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@stop
+
+<script type="text/javascript">
+    function doLoginValidation()
+    {
+        return true ;
+    }
+
+    document.addEventListener('onPageReady', function (e) {
+        /* submitForm( formName, beforeFunctionm, afterFunction, targetId, autofill json response); */
+        submitForm('idLoginForm', doLoginValidation, function (data) {
+        }, '', true, {});
+    }) ;
+
+
+</script>

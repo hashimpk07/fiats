@@ -1,0 +1,359 @@
+<?php
+if( \Illuminate\Support\Facades\Input::get('ajaxquery') || @$CGM_MODE == EDIT ) {
+    ?>
+    <div class="col-md-1 member-child"></div>
+<?php
+}
+
+$class = ( \Illuminate\Support\Facades\Input::get('ajaxquery') ? 'col-md-12' : 'col-md-10' ) ;
+
+if ( @$ADMIN_EDIT ) {
+    $class = "col-md-10" ;
+}
+?>
+<div id="idPersonAddWrap" class="show_inner {{ $class }}" style="padding: 0; float: left;">
+    <?php
+    $extraClass = "" ;
+    if ( @$ADMIN_EDIT ) {
+        $extraClass = "col-md-10"; ?>
+    <div class="col-md-12 col-sm-12 payment">
+        <h3>Participant Details</h3>
+    </div>
+        <div class="col-md-2"  style="text-align: center; padding: 0;"></div>
+    <?php } ?>
+
+        <div class="{{ $extraClass }} form-basic {{$CGM_MODE or ''}}" style="padding-top: 10px; float: left;" >
+            <?php echo Form::open( array( 'url' => $url, 'id' => 'idPersonForm', 'class' => 'form-horizontal' ) );  ?>
+
+            <div class="col-auto col-md-4" >
+                <div class="mobile-1">
+                    <p>Mobile Number</p>
+                    <div class="col-sm-12 input-group mob-search">
+                        <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-mobile" style="font-size: 20px;"></i> </span>
+                        <input class="form-control" type="text" id="txtMobile" name="txtMobile" placeholder="Mobile Number" value="{{ @$record->mobile }}" aria-describedby="basic-addon1">
+                    </div>
+                    <label class="alert-danger cgm-error " id="ePhone"></label>
+                </div>
+                <div class="mobile-2">
+                    <p>Email ID</p>
+
+                    <div class="col-sm-12 input-group mob-search">
+                                        <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-envelope"
+                                                                                              style="font-size: 15px"></i> </span>
+                        <input class="form-control" type="email"  id="txtEmail" name="txtEmail" placeholder="Email Id" value="{{ @$record->email }}"
+                                aria-describedby="basic-addon1" >
+                    </div>
+                    <label class="alert-danger cgm-error " id="eEmail"></label>
+                </div>
+                <div class="mobile-3">
+                    <p>Name</p>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group ">
+                            <select name="selSalutation" id="selSalutation" class="form-control"  >
+                                <?php
+                                foreach( $salutationOptions AS $k => $m ) {
+                                $sel = (($k == @$record->salutation_id) ? 'selected="selected"' : '');
+                                ?>
+                                <option {{ $sel }} value="{{ $k }}">{{ $m }}</option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="form-group">
+
+                            <input type="text" class="form-control fiat-name2  " id="txtName" name="txtName" placeholder="Name" value="{{ @$record->name }}" />
+
+                            </select>
+                        </div>
+                    </div>
+                    <label class="alert-danger cgm-error " id="eName"></label>
+                </div>
+                <div class="mobile-4">
+                    <p>Gender</p>
+
+                    <div class="mobile-4 col-sm-12  mob-search" style="margin-bottom: 14px;">
+                        <div class="col-md-6 search col-xs-6 ">
+                            <input style="float: left" id="idMale" type="radio" class="gender_input"  value="M" name="radGender" {{ ((@$record->gender == 'M') ? 'checked="checked"' : '') }} />
+                            <label style="font-weight: normal" class="after-radio"   for="idMale"> Male </label>
+                        </div>
+                        <div class="col-md-6 search col-xs-6  " style="white-space: nowrap">
+                            <input style="float: left" type="radio"  value="F" name="radGender" class="gender_input"  {{ ((@$record->gender == 'F') ? 'checked="checked"' : '') }} />
+                            <label style="font-weight: normal" id="idFemale" class="after-radio"   for="idFemale"> Female </label>
+                        </div>
+                    </div>
+                    <label class="alert-danger cgm-error " id="eGender"></label>
+                </div>
+                <div class="mobile-5">
+
+                    <div class="col-sm-12 mob-search">
+                        <div class="form-group fiat-religion" style="margin-bottom: 0">
+                            <p>Religion</p>
+
+                            <div class="mobile-5">
+                                <input class="form-control" type="text" id="txtReligion" name="txtReligion" value="{{ @$record->religion }}" placeholder="Religion" />
+                            </div>
+
+                            </select>
+                        </div>
+                        <label class="alert-danger cgm-error " id="eReligion"></label>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6" style="display: none;" >
+                        <div class="form-group fiat-cast">
+                            <p>Caste</p>
+
+                            <div class="mobile-5">
+                                <input class="form-control" type="text" id="txtCaste" name="txtCaste" value="{{ @$record->caste }}" placeholder="Caste" />
+                            </div>
+                            <label class="alert-danger cgm-error " id="eCaste"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-6">
+                    <p>Date of birth</p>
+
+                    <div class="input-group mob-search">
+
+                        <input class="form-control input-medium date-picker" id="datepicker" value="{{ \Qudratom\Utilities\DateTime::clientDate(@$record->dob) }}"  type="text" name="txtDob"
+                               data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy"
+                               aria-describedby="basic-addon1">
+                                        <span class="input-group-addon" id=" datepicker">
+                                            <i onclick="jQuery('#datepicker').datepicker('show');" class="fa fa fa-calendar" style="font-size: 15px"></i> </span>
+                    </div>
+                    <label class="alert-danger cgm-error " id="eDob"></label>
+
+                </div>
+                <div class="mobile-8">
+                    <p>Marital status</p>
+
+                    <div class="mobile-6">
+
+                        <div class="mobile-8">
+                        <select name="selMaritalStatus" id="selMaritalStatus" class="fiat_marital form-control">
+                            <?php
+                            foreach( $maritalStatusOptions AS $k => $m ) {
+
+                            $sel = (($k == @$record->marital_status) ? 'selected="selected"' : '');
+                            ?>
+                            <option {{ $sel }} value="{{ $k }}">{{ $m }}</option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                        </div>
+                        <label class="alert-danger cgm-error " id="eMaritalStatus"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto col-md-4">
+                <div class="mobile-1">
+                    <p>Occupation</p>
+
+                    <div class=" mob-search">
+                        <input class="form-control" type="text" id="txtOccupation" name="txtOccupation" placeholder="Occupation" value="{{ @$record->occupation }}" />
+                    </div>
+                    <label class="alert-danger cgm-error " id="eOccupation"></label>
+                </div>
+                <div class="mobile-2">
+                    <p>Parish</p>
+                    <div class=" mob-search">
+                        <input class="form-control" type="text" id="txtParish" name="txtParish" placeholder="Parish"  value="{{ @$record->parish }}"/>
+                    </div>
+                    <label class="alert-danger cgm-error " id="eParish"></label>
+                </div>
+                <div class="mobile-3">
+                    <p>Diocese</p>
+                    <div class=" mob-search">
+                        <input class="form-control" type="text" id="txtDiocese" name="txtDiocese" placeholder="Diocese" value="{{ @$record->diocese }}" />
+                    </div>
+                    <label class="alert-danger cgm-error " id="eDiocese"></label>
+                </div>
+                <div class="mobile-4">
+                    <p>Testament</p>
+
+                        <div  class="input-group col-xs-12 mob-search" >
+                            <select name="radTestment" class="form-control ui-select fiat_language">
+                                <option value="N">New Testament (NT)</option>
+                                <option value="F">Full Testament (FT)</option>
+                            </select>
+                        </div>
+
+                    <label class="alert-danger cgm-error radTestment" id="eTestament"></label>
+                </div>
+
+                <div class="mobile-5">
+                    <p>Language</p>
+
+                    <div class="input -group mob-search">
+
+                        <select class="form-control ui-select fiat_language" id="selLanguage" name="selLanguage" onchange="languageChange(this);" >
+                            <?php
+                            foreach( $languageOptions AS $k => $m ) {
+
+                            $sel = '' ;
+                            if( $k == @$record->language_id ) {
+                            $sel = 'selected="selected"' ;
+                            }
+                            else {
+                                if( @$record->language_id > 5 && $k == 5 ) {
+                                    $sel = 'selected="selected"' ;
+                                }
+                            }
+                            ?>
+                            <option {{ $sel }} value="{{ $k }}">{{ $m }}</option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                        <input class="form-control" placeholder="Type Other Language" type="text" id="txtLanguage" name="txtLanguage" value="{{ @$language_name }}" />
+
+                    </div>
+                    <label class="alert-danger cgm-error " id="eLang"></label>
+
+                </div>
+                <div class="mobile-8">
+                    <p>Address</p>
+                    <div class="mobile-8">
+                        <textarea rows="4" class="form-control" placeholder="Address" id="txtAddress" name="txtAddress">{{ @$record->address }}</textarea>
+                    </div>
+                    <label class="alert-danger cgm-error " id="eAddress"></label>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-button" >
+                <div class="mobile-1 hidden-xs hidden-sm">
+                    <?php if( \Illuminate\Support\Facades\Auth::check() ) { ?>
+                    <div class="col-xs-12 fiat-report" >
+
+                        <a href="{{ url('member') }}"><button style="width:100%;" type="button" class="btn btn-primary ">Participants</button></a>
+                    </div>
+                    <?php } ?>
+                </div>
+                <div class="mobile-2 hidden-xs hidden-sm"></div>
+                <div class="mobile-3 hidden-xs hidden-sm"></div>
+                <div class="mobile-4 hidden-xs hidden-sm"></div>
+                <div class="mobile-5 hidden-xs hidden-sm"></div>
+                <div class="mobile-6 " style="margin-top: 10px">
+                    <div class="part-save col-xs-12 col-sm-12 ">
+
+                        <?php if( ! @$flags ) { ?>
+                        <?php if( @$record->id ) { ?>
+                        <button onclick="onButtonClk(this);" id="idButtonDelete" type="submit" name="btnDelete" tabindex="4" value="Delete" data-active="" class="fiat-buttons fiat-red click-hack btn btn-primary center-block" >
+                            Delete
+                        </button>
+                        <?php } ?>
+                        <button  type="submit" name="btnNext" value="Next" class="btn btn-primary center-block fiat-buttons" >
+                            Save / Add New
+                        </button>
+                        <button  type="submit" name="btnSavePay" value="SavePay" class="btn btn-primary center-block fiat-buttons" >
+                            Save / Pay Now
+                        </button>
+                        <?php } else { ?>
+                        <button  type="submit" name="btnSave" value="Save" class=" btn btn-primary center-block fiat-buttons" >
+                            Save
+                        </button>
+                        <button style="" class="fiat-buttons cgm-cancel btn btn-primary center-block" type="button" onclick=" jQuery('#idPersonAddWrap').html(''); jQuery('#idMemberAddWrap').html(''); ">
+                            Cancel
+                        </button>
+                        <?php } ?>
+
+                    </div>
+                </div>
+
+            </div>
+
+        <?php if((!@$flags) && (@$count)) { ?>
+        <div style="display: none;">
+        <button onclick="onButtonClk(this);" data-active="" type="submit" name="btnPayment"  tabindex="2" value="MakePayment" class="fiat-buttons" id="makePayment" >
+            Make Payment
+        </button>
+        </div>
+        <?php
+        }
+        ?>
+        <?php if( @$record->id ) { ?>
+
+        <input type="hidden" id="txtId" name="txtId" value="{{ @$record->id }}" />
+        <?php } ?>
+
+        <?php echo Form::close(); ?>
+
+        </div>
+        <script type="text/javascript">
+            function doPersonValidation()
+            {
+                if(  jQuery('#makePayment').attr('data-active') == '1' )
+                {
+                    return true;
+                }
+                if( jQuery('#idButtonDelete').attr('data-active') == '1' )
+                {
+                    return confirm('Delete participant ?') ;
+                }
+                var a = {
+                    '#txtMobile': {func: 'required()', errfield: '#ePhone', errmsg: 'Invalid Mobile'},
+                    '#txtEmail' :  {func: 'required()', errfield: '#eEmail', errmsg: 'Invalid Email'},
+                    '#txtName' :  {func: 'required()', errfield: '#eName', errmsg: 'Invalid Name'},
+                    '#selSalutation':{func: 'notvalue("")',errfield: '#eType', errmsg: 'Invalid Salutation'},
+                    '.gender_input'  : {func: 'ischecked()', errfield: '#eGender', errmsg: 'Please Select'},
+                //    '#txtReligion' :  {func: 'required()', errfield: '#eReligion', errmsg: 'Invalid Religion'},
+                //    '#txtCaste' :  {func: 'required()', errfield: '#eCaste', errmsg: 'Invalid Caste'},
+                    '#datepicker' :  {func: 'required()', errfield: '#eDob', errmsg: 'Invalid Date'},
+                    '#selMaritalStatus' :  {func: 'notvalue("")', errfield: '#eMaritalStatus', errmsg: 'Invalid Marital Status'},
+                 //   '#txtParish' :  {func: 'required()', errfield: '#eParish', errmsg: 'Invalid Parish'},
+                 //   '#txtDiocese' :  {func: 'required()', errfield: '#eDiocese', errmsg: 'Invalid Diocese'},
+
+                    '#selLanguage':{func: 'notvalue("")',errfield: '#eLang', errmsg: 'Invalid Language'},
+                    '#txtAddress' :  {func: 'required()', errfield: '#eAddress', errmsg: 'Invalid Address'},
+
+                };
+
+                if( validateForm(a, '' ) )
+                {
+                    return true ;
+                }
+                return false ;
+            }
+            jQuery( ".date-picker" ).datepicker({changeMonth: true,
+                changeYear: true,
+                yearRange: '1900:document.write(currentYear.getFullYear())',
+                maxDate: new Date(),
+               dateFormat: 'dd-mm-yy'
+            });
+
+            function onButtonClk( obj ) {
+                jQuery('.click-hack').attr('data-active', '') ;
+                jQuery(obj).attr('data-active', '1') ;
+            }
+            submitForm('idPersonForm', doPersonValidation, function(data) { }, '', true, {
+                "click" : ".refreshHtmlTable",
+                "hide_if_ok" : '#idPersonForm'
+            } );
+
+            function languageChange(obj) {
+
+                if( jQuery('#selLanguage').val() == 5 ) {
+                    jQuery('#txtLanguage').show() ;
+                }
+                else {
+                    jQuery('#txtLanguage').hide() ;
+                }
+            }
+
+            languageChange(jQuery('#selLanguage')) ;
+
+        </script>
+
+
+</div>
+<?php
+if( \Illuminate\Support\Facades\Input::get('ajaxquery') || @$CGM_MODE == EDIT ) {
+?>
+<div class="col-md-1 member-child"></div>
+<?php
+}
+?>

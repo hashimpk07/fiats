@@ -1,0 +1,60 @@
+<div class="form-basic">
+    <div class="form-title-row">
+        <h1>Fiat Scriptura</h1>
+    </div>
+    <div class="form-title-row">
+        <p>Proudly presenting the portal fiatscriptura.org for the registration of the book writing competition, “Fiat Scriptura” which is entering to the fourth season in the year of 2017. We thank all our past participants for making the competition a big success.</p><br>
+        <p>Fiat scriptura is an a endeavor by Fiat Mission started in the year 2013. To familiarise the ability of writing to the people. It appeared to many as a great opportunity to get closer to the writing practises. The overwhelming success of the program promote us to take forward the competition to the coming years and better heights.</p><br>
+        <p>Our past competitions proved the need of a competition and its importance with the participation of more than 3000 participants in the years before. We are expecting a minimum 30% growth a year and be one of the leading competition of its kind in the country soon in coming years.</p><br>
+        <p>New updates on the contest are coming soon. Stay tuned.</p>
+    </div>
+
+    <div class="home-left">
+        <a href="{{ asset('public/assets/data/ad.jpg') }}" target="_blank">
+            <img class="admin_image" src="{{ asset('public/assets/data/ad.jpg') }}" usemap="#Map" border="0">
+        </a>
+    </div>
+
+    <div class="home-middle">
+        <a href="{{ asset('public/assets/data/ad.jpg') }}" target="_blank">
+            <img class="admin_image" src="{{ asset('public/assets/data/ad.jpg') }}" usemap="#Map" border="0">
+        </a>
+    </div>
+
+    <div class="home-right">
+        <a href="{{ asset('public/assets/data/winner.jpg') }}" target="_blank">
+            <img class="admin_image" src="{{ asset('public/assets/data/ad.jpg') }}" usemap="#Map" border="0">
+        </a>
+    </div>
+
+    <div class="form-title-row">
+        <h2>Terms And Conditions</h2>
+    </div>
+    <div>
+        <ul class="a">
+            <li>The organizers reserve the right to amend the rules of the competition at any point of time during the competition. Participants will be notified about the same by E-mail / Letter / Telephone</li>
+            <li>The prize will be at the gathering attended by the dignitaries for different groups at times fixed by Fiat Scriptura.</li>
+            <li>The winners will be intimated over Telephone / E-mail / Letter and the prizes should be claimed with 2 months from the date of gathering.</li>
+            <li>Those who desire to have their hand written copies of bible can have them at the gathering of the concerned group. The absentees of the function may claim them within 2 months of the gathering by from the office or by paying the actual cost of dispatch.</li>
+            <li>The work shall be done fully by a single person. If not entries will be disqualified.</li>
+            <li>The completed bible should reach Fiat Scriptura on or before December 20th with registered number written on them</li>
+        </ul>
+    </div>
+
+
+
+    <div class="home-button">
+        <a href="{{ url('otp') }}" class="home-reg-button">
+            <input type="button" value="Register" />
+        </a>
+    </div>
+
+
+
+</div>
+<style>
+    ul.a {list-style-type: circle;}
+</style>
+
+
+
