@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use Qudratom\Utilities\DateTime;
+use Qudratom\Utilities\Objectize;
+
+/**
+ * Class DummyClass
+ */
+class Parameters extends Model {
+
+	public $timestamps = false;
+
+	protected $fillable = [];
+
+	protected $guarded = [ ];
+
+	public static function get( $key )
+	{
+		$obj = Parameters::where('name', '=', $key) ;
+		if( $obj )
+		{
+			$first = $obj->first() ;
+			if( $first ){
+				return $first->value ;
+			}
+		}
+		return null ;
+	}
+}
